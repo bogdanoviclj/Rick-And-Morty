@@ -28,8 +28,10 @@ export const renderHomePage = (char) => {
       <div class="char-item" id="${char.id}">
         <div class="card" style="width: 15vw;">
           <img src="${char.image}" class="card-img-top" alt="Character image">
-          <h5 class="card-title px-3 py-2 m-0">${char.name}</h5>
-          <button class="btn btn-outline-primary p-0 mx-auto my-2 text-primary"> Like </button>
+          <h5 class="card-title px-3 pt-3 m-0">${char.name}</h5>
+          <div class="button d-flex justify-content-center p-3">
+            <button class="btn"> Like </button>
+          </div>
         </div>
       </div>
     `;

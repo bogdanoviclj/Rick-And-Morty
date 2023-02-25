@@ -11,6 +11,16 @@ class RickAndMortyChar {
     };
 };
 
+export const state = {
+    allCharacters: [],
+    curentPage: 1
+}
+
+export const getPageItems = (curentPage, allItems) => {
+    const from = curentPage === 1? 0 : (curentPage-1) * 4;
+    const to = curentPage * 4;
+    return allItems.slice(from, to);
+}
 export const getCharacters = () => {
     return fetch("https://rickandmortyapi.com/api/character")
     .then((response) => {return response.json()})
